@@ -1,0 +1,43 @@
+.main_banner {
+    position: relative;
+    height: calc(100vh / 1.5);
+    background: url(../../images/main_slider_n02.jpg)no-repeat fixed center/cover;
+
+    &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: url(../../images/pattern5.png);
+        opacity: 0.5;
+    }
+
+    .txt_box {
+        @include position-center();
+        color: #fff;
+        text-align: center;
+        z-index: 999;
+        text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+
+        h2 {
+            font-size: 48px;
+            font-weight: 700;
+            margin: 0 0 12px 0;
+        }
+        p {
+            margin: 0 0 40px 0;
+        }
+    }
+
+    .btn_box {
+        span {
+            font-size: 18px;
+        }
+        strong {
+            font-size: 32px;
+            font-weight: 900;
+        }
+    }
+}

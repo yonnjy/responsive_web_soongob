@@ -1,0 +1,39 @@
+.main_textbanner {
+    height: 400px;
+    ul {
+        display: flex;
+        gap: 40px;
+        justify-content: center;
+        text-align: center;
+        li {
+            span {
+                font-size: 60px;
+                font-weight: 300;
+                display: block;
+                margin: 0 0 15px 0;
+            }
+            strong {
+                position: relative;
+                display: block;
+                font-size: 20px;
+                font-weight: 700;
+                margin: 0 0 30px 0;
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    bottom: -15px;
+                    left: 50%;
+                    transform: translate(-50%, 0);
+                    width: 30px;
+                    height: 2px;
+                    background: #e8b70f;
+                }
+            }
+            p {
+                width: 300px;
+                color: #888;
+            }
+        }
+    }
+}

@@ -1,0 +1,140 @@
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    background: #fff;
+    display: flex;
+    z-index: 999;
+    border-right: 1px solid #eee;
+
+    .h_left {
+        width: 60px;
+        height: 100%;
+        background: #333;
+        padding: 20px 0 0 8px;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 60px;
+            width: 55px;
+            height: 5px;
+            background: #da544b;
+        }
+        &::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 115px;
+            width: 55px;
+            height: 5px;
+            background: #ffa620;
+        }
+
+        a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: #ddd;
+
+            .btn_qna {
+                font-size: 24px;
+                font-weight: 500;
+            }
+        }
+    }
+
+    .h_right {
+        display: flex;
+        flex-direction: column;
+        gap: 100px;
+        padding: 0 15px;
+        width: 220px;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 55px;
+            width: 55px;
+            height: 5px;
+            background: #337689 ;
+        }
+        &::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 55px;
+            height: 5px;
+            background: #6fa476;
+        }
+
+        h1 {
+            padding: 60px 10px 0;
+
+            a {
+                img {
+                    width: 170px;
+                }
+            }
+        }
+
+        .gnb {
+            ul {
+                li {
+                    a {
+                        display: block;
+                        font-weight: 500;
+                        line-height: 50px;
+                        border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+                    }
+
+                    &:hover .sub {
+                        visibility: visible;
+                        width: 200px;
+                        transition: 0.5s;
+                    }
+                    &:hover .sub::before {
+                        width: 200px;
+                        transition: 0.5s;
+                    }
+
+
+                    .sub {
+                        display: none;
+                    }
+                }
+            }
+        }
+
+        .qna {
+            position: relative;
+
+            .txt {
+                display: block;
+                margin: 0 0 24px 0;
+                padding: 0 0 12px 0;
+                border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+                font-weight: 700;
+            }
+
+            strong {
+                font-size: 32px;
+                font-weight: 900;
+            }
+
+            .btn_app {
+                position: absolute;
+                top: -4px;
+                right: 0;
+                font-size: 20px;
+            }
+        }
+    }
+}
