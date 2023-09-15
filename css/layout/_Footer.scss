@@ -1,0 +1,46 @@
+.footer {
+    padding: 30px 0 30px 280px;
+
+    .inner {
+        position: relative;
+
+        .logo {
+            position: absolute;
+            top: 20px;
+            right: 0;
+
+            img {
+                width: 150px;
+            }
+        }
+
+        .f_top {
+            position: relative;
+            display: flex;
+            gap: 40px;
+            margin: 0 0 24px 0;
+
+            &::before {
+                content: '';
+                position: absolute;
+                bottom: -10px;
+                left: 0;
+                width: calc(100% - 300px);
+                height: 1px;
+                background: #ddd;
+            }
+        }
+
+        .f_bot {
+            li {
+                line-height: 24px;
+            }
+
+            .copy {
+                text-align: right;
+                margin: -24px 0 0 0;
+            }
+        }
+    }
+
+}

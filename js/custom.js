@@ -49,8 +49,17 @@ $(function () {
         ]
     });
 
-    $('.main_vi .main_slide').slick({
-        asNavFor: ".main_bann .img_slide",
+    $('.main_service .txt_slide').slick({
+        asNavFor: ".main_service .img_slide",
+        arrows: false,
+        draggable : false,
+        autoplay: true,
+        pauseOnHover: false,
+        pauseOnFocus: false,
+    });
+
+    $('.main_service .img_slide').slick({
+        asNavFor: ".main_service .txt_slide",
         arrows: false,
         draggable : false,
         autoplay: true,

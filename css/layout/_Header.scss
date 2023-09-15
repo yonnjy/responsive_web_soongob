@@ -33,6 +33,16 @@
             background: #ffa620;
         }
 
+        strong {
+            user-select: none;
+            display: block;
+            writing-mode: vertical-lr;
+            color: #fff;
+            font-size: 14px;
+            padding: 20px 0 0 12px;
+            letter-spacing: 5px;
+        }
+
         a {
             display: flex;
             align-items: center;
@@ -45,6 +55,12 @@
             .btn_qna {
                 font-size: 24px;
                 font-weight: 500;
+                transform: rotate(0);
+                transition: 0.5s;
+            }
+
+            &:hover .btn_qna {
+                transform: rotate(180deg);
             }
         }
     }
@@ -129,12 +145,22 @@
                 font-weight: 900;
             }
 
-            .btn_app {
-                position: absolute;
-                top: -4px;
-                right: 0;
-                font-size: 20px;
+            a {
+                .btn_app {
+                    position: absolute;
+                    top: -4px;
+                    right: 0;
+                    font-size: 20px;
+                    transform: rotate(0);
+                    transition: 0.5s;
+    
+                }
+                &:hover .btn_app {
+                    transform: rotate(180deg);
+                }
+
             }
+
         }
     }
 }

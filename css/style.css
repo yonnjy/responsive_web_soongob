@@ -113,6 +113,17 @@ button {
   height: 5px;
   background: #ffa620;
 }
+.header .h_left strong {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  display: block;
+  writing-mode: vertical-lr;
+  color: #fff;
+  font-size: 14px;
+  padding: 20px 0 0 12px;
+  letter-spacing: 5px;
+}
 .header .h_left a {
   display: flex;
   align-items: center;
@@ -125,6 +136,11 @@ button {
 .header .h_left a .btn_qna {
   font-size: 24px;
   font-weight: 500;
+  transform: rotate(0);
+  transition: 0.5s;
+}
+.header .h_left a:hover .btn_qna {
+  transform: rotate(180deg);
 }
 .header .h_right {
   display: flex;
@@ -189,11 +205,53 @@ button {
   font-size: 32px;
   font-weight: 900;
 }
-.header .h_right .qna .btn_app {
+.header .h_right .qna a .btn_app {
   position: absolute;
   top: -4px;
   right: 0;
   font-size: 20px;
+  transform: rotate(0);
+  transition: 0.5s;
+}
+.header .h_right .qna a:hover .btn_app {
+  transform: rotate(180deg);
+}
+
+.footer {
+  padding: 30px 0 30px 280px;
+}
+.footer .inner {
+  position: relative;
+}
+.footer .inner .logo {
+  position: absolute;
+  top: 20px;
+  right: 0;
+}
+.footer .inner .logo img {
+  width: 150px;
+}
+.footer .inner .f_top {
+  position: relative;
+  display: flex;
+  gap: 40px;
+  margin: 0 0 24px 0;
+}
+.footer .inner .f_top::before {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: calc(100% - 300px);
+  height: 1px;
+  background: #ddd;
+}
+.footer .inner .f_bot li {
+  line-height: 24px;
+}
+.footer .inner .f_bot .copy {
+  text-align: right;
+  margin: -24px 0 0 0;
 }
 
 .main_vi {
@@ -419,4 +477,25 @@ button {
 .main_textbanner ul li p {
   width: 300px;
   color: #888;
+}
+
+.main_service {
+  position: relative;
+}
+.main_service .service {
+  display: flex;
+  gap: 30px;
+}
+.main_service .service > * {
+  flex: 1;
+  min-width: 0;
+}
+.main_service .service .txt_slide .txt {
+  float: left;
+}
+.main_service .service .img_slide {
+  z-index: -1;
+}
+.main_service .service .img_slide figure {
+  float: left;
 }/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,24 @@
+.main_service {
+    position: relative;
+    .service {
+        display: flex;
+        gap: 30px;
+
+        &>* {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .txt_slide {
+            .txt {
+                float: left;
+            }
+        }
+        .img_slide {
+            z-index: -1;
+            figure {
+                float: left;
+            }
+        }
+    }
+}
