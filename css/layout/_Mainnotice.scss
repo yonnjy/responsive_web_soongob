@@ -1,0 +1,81 @@
+.main_notice {
+    ul {
+        display: flex;
+        gap: 15px;
+        justify-content: space-between;
+        li {
+            flex: 1;
+            position: relative;
+            .right {
+                position: absolute;
+                top: 0;
+                right: 20px;
+                width: 20px;
+                height: 20px;
+                line-height: 20px;
+                background: #333;
+                border-radius: 50%;
+                color: #fff;
+            }
+            h3 {
+                font-size: 20px;
+                font-weight: 700;
+                border-bottom: 1px solid #ddd;
+                padding: 0 0 15px 0;
+                margin: 0 0 15px 0;
+            }
+
+            strong {
+                position: relative;
+                display: block;
+                font-size: 18px;
+                font-weight: 500;
+                margin: 0 0 24px 0;
+                padding-left: 24px;
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    left: 5px;
+                    top: 50%;
+                    transform: translate(0, -50%);
+                    width: 8px;
+                    height: 1px;
+                    border-radius: 50%;
+                    background: #666;
+                }
+                
+            }
+            ol {
+                li {
+                    a {
+                        display: flex;
+                        justify-content: space-between;
+
+                        .title {
+                            display: inline-block;
+                            font-size: 15px;
+                            line-height: 24px;
+                            padding-left: 10px;
+
+                            &::before {
+                                content: '';
+                                position: absolute;
+                                left: 0;
+                                top: 50%;
+                                transform: translate(0, -50%);
+                                width: 1px;
+                                height: 12px;
+                                background: #ddd;
+                            }
+                        }
+                        .day {
+                            font-size: 14px;
+                            color: #888;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

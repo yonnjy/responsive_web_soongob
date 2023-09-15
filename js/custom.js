@@ -49,23 +49,23 @@ $(function () {
         ]
     });
 
-    $('.main_service .txt_slide').slick({
-        asNavFor: ".main_service .img_slide",
-        arrows: false,
-        draggable : false,
-        autoplay: true,
-        pauseOnHover: false,
-        pauseOnFocus: false,
-    });
+    // $('.main_service .txt_slide').slick({
+    //     asNavFor: ".main_service .img_slide",
+    //     arrows: false,
+    //     draggable : false,
+    //     autoplay: true,
+    //     pauseOnHover: false,
+    //     pauseOnFocus: false,
+    // });
 
-    $('.main_service .img_slide').slick({
-        asNavFor: ".main_service .txt_slide",
-        arrows: false,
-        draggable : false,
-        autoplay: true,
-        pauseOnHover: false,
-        pauseOnFocus: false,
-    });
+    // $('.main_service .img_slide').slick({
+    //     asNavFor: ".main_service .txt_slide",
+    //     arrows: false,
+    //     draggable : false,
+    //     autoplay: true,
+    //     pauseOnHover: false,
+    //     pauseOnFocus: false,
+    // });
 
     $(window).on('resize', function () {
         $('.gnb').removeClass('on');
