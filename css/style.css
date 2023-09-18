@@ -447,8 +447,7 @@ button {
 }
 .main_textbanner ul {
   display: flex;
-  gap: 40px;
-  justify-content: center;
+  justify-content: space-between;
   text-align: center;
 }
 .main_textbanner ul li span {
@@ -481,29 +480,145 @@ button {
 
 .main_service {
   position: relative;
-  display: none;
 }
 .main_service .service {
   display: flex;
-  gap: 30px;
 }
 .main_service .service > * {
   flex: 1;
   min-width: 0;
+  overflow: hidden;
+}
+.main_service .service .txt_slide {
+  background: #f9f9f9;
+  min-height: 0;
+  overflow: hidden;
 }
 .main_service .service .txt_slide .txt {
+  position: relative;
   float: left;
+  padding: 200px 0 0 48px;
+  z-index: 999;
+  color: #fff;
+}
+.main_service .service .txt_slide .txt strong {
+  display: block;
+  font-size: 30px;
+  font-weight: 700;
+  margin: 0 0 24px 0;
+}
+.main_service .service .txt_slide .txt span {
+  display: block;
+  font-size: 18px;
+  width: 600px;
+}
+.main_service .service .txt_slide .txt01 {
+  height: 541px;
+  background: url(../../images/main_slider_n01.jpg) no-repeat center center/cover;
+  background-blend-mode: multiply;
+  background-color: #222;
+}
+.main_service .service .txt_slide .txt02 {
+  height: 541px;
+  background: url(../../images/main_slider_n02.jpg) no-repeat center center/cover;
+  background-blend-mode: multiply;
+  background-color: #222;
+}
+.main_service .service .txt_slide .txt03 {
+  height: 541px;
+  background: url(../../images/main_slider_n03.jpg) no-repeat center center/cover;
+  background-blend-mode: multiply;
+  background-color: #222;
+}
+.main_service .service .txt_slide .txt01::before {
+  content: "01";
+  position: absolute;
+  top: 10px;
+  right: 60px;
+  font-weight: 900;
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 220px;
+  font-style: italic;
+  z-index: -1;
+}
+.main_service .service .txt_slide .txt02::before {
+  content: "02";
+  position: absolute;
+  top: 10px;
+  right: 60px;
+  font-weight: 900;
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 220px;
+  font-style: italic;
+  z-index: -1;
+}
+.main_service .service .txt_slide .txt03::before {
+  content: "03";
+  position: absolute;
+  top: 10px;
+  right: 60px;
+  font-weight: 900;
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 220px;
+  font-style: italic;
+  z-index: -1;
 }
 .main_service .service .img_slide {
   z-index: -1;
 }
 .main_service .service .img_slide figure {
-  float: left;
+  float: right;
+}
+.main_service .slick-dots {
+  position: absolute;
+  bottom: 32px;
+  left: 48px;
+  z-index: 999;
+}
+.main_service .slick-dots > li {
+  display: inline-block;
+}
+.main_service .slick-dots > li button {
+  font-size: 0;
+  width: 56px;
+  height: 8px;
+  background: #fff;
+  border-radius: 3px;
+  cursor: pointer;
+}
+.main_service .slick-dots > li ~ li button {
+  margin: 0 0 0 8px;
+}
+.main_service .slick-dots > li.slick-active button {
+  background: #e8b70f;
+}
+.main_service .arrows {
+  position: absolute;
+  top: 50%;
+  left: 48.5%;
+  transform: translate(0, -50%);
+  max-height: 120px;
+  height: 100%;
+}
+.main_service .arrows > * {
+  position: absolute;
+  font-size: 40px;
+  border-radius: 50%;
+  padding: 5px;
+  color: #444;
+  background: #fff;
+  cursor: pointer;
+}
+.main_service .arrows .up {
+  top: 0;
+}
+.main_service .arrows .down {
+  bottom: 0;
 }
 
 .main_notice ul {
   display: flex;
-  gap: 15px;
+  gap: 30px;
   justify-content: space-between;
 }
 .main_notice ul li {
@@ -513,10 +628,11 @@ button {
 .main_notice ul li .right {
   position: absolute;
   top: 0;
-  right: 20px;
+  right: 0;
   width: 20px;
   height: 20px;
   line-height: 20px;
+  font-weight: 300;
   background: #333;
   border-radius: 50%;
   color: #fff;
@@ -550,6 +666,7 @@ button {
 .main_notice ul li ol li a {
   display: flex;
   justify-content: space-between;
+  transition: 0.5s;
 }
 .main_notice ul li ol li a .title {
   display: inline-block;
@@ -565,9 +682,22 @@ button {
   transform: translate(0, -50%);
   width: 1px;
   height: 12px;
-  background: #ddd;
+  background: #eee;
 }
 .main_notice ul li ol li a .day {
   font-size: 14px;
   color: #888;
+}
+.main_notice ul li ol li a:hover {
+  color: #e8b70f;
+}
+.main_notice ul li .supot {
+  position: absolute;
+  top: -5px;
+  right: 0;
+  font-size: 32px;
+}
+.main_notice ul li .call {
+  font-size: 40px;
+  font-weight: 900;
 }/*# sourceMappingURL=style.css.map */

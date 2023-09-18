@@ -2,8 +2,7 @@
     height: 400px;
     ul {
         display: flex;
-        gap: 40px;
-        justify-content: center;
+        justify-content: space-between;
         text-align: center;
         li {
             span {
@@ -27,7 +26,7 @@
                     transform: translate(-50%, 0);
                     width: 30px;
                     height: 2px;
-                    background: #e8b70f;
+                    background: $main-color;
                 }
             }
             p {

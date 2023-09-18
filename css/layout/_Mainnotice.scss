@@ -1,22 +1,26 @@
 .main_notice {
     ul {
         display: flex;
-        gap: 15px;
+        gap: 30px;
         justify-content: space-between;
+
         li {
             flex: 1;
             position: relative;
+
             .right {
                 position: absolute;
                 top: 0;
-                right: 20px;
+                right: 0;
                 width: 20px;
                 height: 20px;
                 line-height: 20px;
+                font-weight: 300;
                 background: #333;
                 border-radius: 50%;
                 color: #fff;
             }
+
             h3 {
                 font-size: 20px;
                 font-weight: 700;
@@ -44,13 +48,15 @@
                     border-radius: 50%;
                     background: #666;
                 }
-                
+
             }
+
             ol {
                 li {
                     a {
                         display: flex;
                         justify-content: space-between;
+                        transition: 0.5s;
 
                         .title {
                             display: inline-block;
@@ -66,15 +72,31 @@
                                 transform: translate(0, -50%);
                                 width: 1px;
                                 height: 12px;
-                                background: #ddd;
+                                background: #eee;
                             }
                         }
+
                         .day {
                             font-size: 14px;
                             color: #888;
                         }
+
+                        &:hover {
+                            color: $main-color;
+                        }
                     }
                 }
+            }
+
+            .supot {
+                position: absolute;
+                top: -5px;
+                right: 0;
+                font-size: 32px;
+            }
+            .call {
+                font-size: 40px;
+                font-weight: 900;
             }
         }
     }

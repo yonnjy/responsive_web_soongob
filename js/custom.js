@@ -49,23 +49,30 @@ $(function () {
         ]
     });
 
-    // $('.main_service .txt_slide').slick({
-    //     asNavFor: ".main_service .img_slide",
-    //     arrows: false,
-    //     draggable : false,
-    //     autoplay: true,
-    //     pauseOnHover: false,
-    //     pauseOnFocus: false,
-    // });
+    $('.main_service .txt_slide').slick({
+        asNavFor: ".main_service .img_slide",
+        dots: true,
+        arrows: false,
+        draggable: false,
+        autoplay: true,
+        pauseOnHover: false,
+        pauseOnFocus: false,
+    });
 
-    // $('.main_service .img_slide').slick({
-    //     asNavFor: ".main_service .txt_slide",
-    //     arrows: false,
-    //     draggable : false,
-    //     autoplay: true,
-    //     pauseOnHover: false,
-    //     pauseOnFocus: false,
-    // });
+    $('.main_service .img_slide').slick({
+        asNavFor: ".main_service .txt_slide",
+        arrows: false,
+        autoplay: true,
+        pauseOnHover: false,
+        pauseOnFocus: false,
+    });
+
+    $('.main_service .arrows .up').on('click', function () {
+        $('.txt_slide').slick('slickPrev');
+    });
+    $('.main_service .arrows .down').on('click', function () {
+        $('.txt_slide').slick('slickNext');
+    });
 
     $(window).on('resize', function () {
         $('.gnb').removeClass('on');
