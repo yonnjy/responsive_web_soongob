@@ -4,6 +4,7 @@
     height: 100vh;
 
     .main_slide {
+        overflow: hidden;
         figure {
             position: relative;
             float: left;

@@ -5,7 +5,7 @@
     height: 100vh;
     background: #fff;
     display: flex;
-    z-index: 999;
+    z-index: 9999;
     border-right: 1px solid #eee;
 
     .h_left {
@@ -23,6 +23,7 @@
             height: 5px;
             background: #da544b;
         }
+
         &::after {
             content: '';
             position: absolute;
@@ -69,7 +70,6 @@
         display: flex;
         flex-direction: column;
         gap: 100px;
-        padding: 0 15px;
         width: 220px;
 
         &::before {
@@ -79,8 +79,9 @@
             right: 55px;
             width: 55px;
             height: 5px;
-            background: #337689 ;
+            background: #337689;
         }
+
         &::after {
             content: '';
             position: absolute;
@@ -92,7 +93,7 @@
         }
 
         h1 {
-            padding: 60px 10px 0;
+            padding: 60px 25px 0;
 
             a {
                 img {
@@ -103,12 +104,16 @@
 
         .gnb {
             ul {
+                padding-left: 15px;
+
                 li {
+                    padding-right: 15px;
+
                     a {
                         display: block;
                         font-weight: 500;
                         line-height: 50px;
-                        border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+                        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
                     }
 
                     &:hover .sub {
@@ -116,14 +121,29 @@
                         width: 200px;
                         transition: 0.5s;
                     }
-                    &:hover .sub::before {
-                        width: 200px;
-                        transition: 0.5s;
+
+                    &:hover .sub li {
+                        opacity: 1;
+                        transition: 0.5s 0.2s;
                     }
 
-
                     .sub {
-                        display: none;
+                        visibility: hidden;
+                        position: absolute;
+                        top: 0;
+                        left: 280px;
+                        width: 0;
+                        height: 100vh;
+                        padding: 270px 15px 0;
+                        background: #333;
+                        color: #fff;
+
+                        li {
+                            opacity: 0;
+                            width: 170px;
+                            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+                            font-size: 15px;
+                        }
                     }
                 }
             }
@@ -131,12 +151,13 @@
 
         .qna {
             position: relative;
+            padding: 0 15px;
 
             .txt {
                 display: block;
                 margin: 0 0 24px 0;
                 padding: 0 0 12px 0;
-                border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+                border-bottom: 1px solid #ddd;
                 font-weight: 700;
             }
 
@@ -149,12 +170,13 @@
                 .btn_app {
                     position: absolute;
                     top: -4px;
-                    right: 0;
+                    right: 15px;
                     font-size: 20px;
                     transform: rotate(0);
                     transition: 0.5s;
-    
+
                 }
+
                 &:hover .btn_app {
                     transform: rotate(180deg);
                 }
